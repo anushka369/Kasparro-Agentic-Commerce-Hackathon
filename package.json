@@ -1,0 +1,35 @@
+{
+  "name": "ai-checkout-recovery",
+  "version": "0.1.0",
+  "description": "AI-Assisted Checkout Recovery — detects friction and intervenes conversationally during Shopify checkout",
+  "type": "module",
+  "main": "dist/checkout-recovery.js",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:prod": "NODE_ENV=production node esbuild.config.js",
+    "build:watch": "node esbuild.config.js --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "lhci": "lhci autorun"
+  },
+  "dependencies": {
+    "@shopify/storefront-api-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1040.0",
+    "@aws-sdk/lib-dynamodb": "^3.1040.0",
+    "@types/jsdom": "^28.0.1",
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.20.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "esbuild": "^0.21.5",
+    "fast-check": "^3.19.0",
+    "jsdom": "^29.1.1",
+    "pg": "^8.20.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
